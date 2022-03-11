@@ -1,12 +1,11 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 
-public class DiscountNullPercentTest extends BaseTest{
+public class DiscountNullPercentTest extends BaseTest {
 
     @Test
-    public void discountShouldBeNullPerCent (){
+    public void discountShouldBeNullPerCent() {
         driver.get("https://www.sharelane.com");
         driver.findElement(By.partialLinkText("ENTER")).click();
         driver.findElement(By.partialLinkText("Sign up")).click();
@@ -31,7 +30,6 @@ public class DiscountNullPercentTest extends BaseTest{
         driver.findElement(By.name("q")).sendKeys("15");
         driver.findElement(By.cssSelector("[value = Update]")).click();
         String price = driver.findElement(By.xpath("//tr[2]//td[7]")).getText();
-        assertEquals(price,"150","price is not correct");
-
+        assertEquals(price, "150", "price is not correct");
     }
 }
