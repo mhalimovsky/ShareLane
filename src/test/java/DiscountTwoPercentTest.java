@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertEquals;
 
 public class DiscountTwoPercentTest extends BaseTest {
@@ -33,4 +34,3 @@ public class DiscountTwoPercentTest extends BaseTest {
         assertEquals(discount, "2", "discount is not correct");
     }
 }
-
